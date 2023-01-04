@@ -1,0 +1,174 @@
+body {
+  background-color: #0A021D;
+}
+
+main.home-page {
+  section.banner {
+    background: linear-gradient(149.87deg, #B42E2E -43.45%, #BD473F 21.45%, #65416A 76.71%, #163C91 126.2%);;
+    height: 700px;
+    max-height: 90vh;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    .content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #FFF;
+      text-align: center;
+      padding-bottom: 200px;
+
+      .apresentation {
+        font-size: 30px;
+        margin-bottom: .75rem;
+      }
+
+      .title {
+        font-size: 100px;
+        font-family: $mina;
+        line-height: 100px;
+        margin: .25rem 0;
+        text-shadow: 0 5px 30px rgba(#000, .3);
+      }
+
+      .desc {
+        font-size: 18px;
+        letter-spacing: 1px;
+        position: relative;
+
+        &::before { content: '‹ '}
+        &::after { content: ' /›'; }
+      }
+    }
+
+    .background-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      .clouds {
+        .top {
+          width: 100%;
+          height: 200px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: .15;
+
+          #cloud-top-1 {
+            width: 500px;
+            position: absolute;
+            left: -180px;
+            top: -50px;
+          }
+          
+          #cloud-top-2 {
+            width: 450px;
+            position: absolute;
+            right: -180px;
+            top: -50px;
+          }
+        }
+
+        .bottom {
+          width: 100%;
+          height: 250px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: .05;
+
+          #cloud-1 {
+            position: absolute;
+            right: 45%;
+            width: 60%;
+            top: 0;
+          }
+          
+          #cloud-2 {
+            position: absolute;
+            left: 45%;
+            width: 60%;
+            top: 0%;
+          }
+        }
+      }
+
+      .mountains {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .left {
+          position: absolute;
+          left: 0;
+          width: 55%;
+          height: 100%;
+          
+          #mountain-1 {
+            height: 140%;
+            position: absolute;
+            right: -5%;
+            z-index: 0;
+          }
+
+          #mountain-2 {
+            height: 110%;
+            position: absolute;
+            right: 10%;
+            bottom: -60%;
+            z-index: 1;
+          }
+        }
+
+        .right {
+          position: absolute;
+          right: 0;
+          width: 55%;
+          height: 100%;
+          
+          #mountain-3 {
+            height: 175%;
+            position: absolute;
+            left: 5%;
+            z-index: 0;
+            top: -8%;
+          }
+
+          #mountain-4 {
+            height: 110%;
+            position: absolute;
+            left: 10%;
+            bottom: -40%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  section.principal {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 20;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -220px;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(to bottom, rgba(#190A37, 0), #190A37, #0A021D);
+    }
+  }
+}
